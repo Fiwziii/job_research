@@ -7,3 +7,10 @@ export interface ServiceReponse {
         data?: any;
     };
 }
+
+export interface JwtUserRequest {
+    id: number;
+    email: string;
+    name: string;
+    surname: string;
+}

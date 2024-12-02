@@ -1,7 +1,10 @@
+import { JwtUserRequest } from "./interface";
+
 declare global {
     namespace Express {
         interface Request {
-            users: any
+            users: JwtUserRequest,
+            jwtToken: string
         }
     }
 }

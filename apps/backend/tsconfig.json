@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",                        // Base directory for resolving non-relative paths
+    "paths": {                             // Alias paths for imports
+      "$/*": ["src/*"],
+    },
+    "rootDir": "./src",   
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
     /* Projects */
@@ -12,11 +17,8 @@
 
     /* Language and Environment */
     "target": "es2016",     
-    "baseUrl": ".",                        // Base directory for resolving non-relative paths
-    "paths": {                             // Alias paths for imports
-      "$/*": ["src/*"],
-    },
-    "rootDir": "./src",             
+		"typeRoots": ["./node_modules/@types"], // Specify multiple folders that act like './node_modules/@types'.
+             
                     /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
     // "lib": [],                                        /* Specify a set of bundled library declaration files that describe the target runtime environment. */
     // "jsx": "preserve",                                /* Specify what JSX code is generated. */
@@ -114,9 +116,10 @@
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
   "files": [
-      "./src/types/express.d.ts"
+      "./src/types/express.d.ts",
   ],
   "include": [
+      "./node_modules/@types", // Include TypeScript declaration files in node_modules
       "./src/**/*.ts",   // Include TypeScript files in src directory
       "./src/**/*.d.ts"  // Include TypeScript declaration files in src directory
   ]

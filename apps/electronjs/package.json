@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.cjs",
   "scripts": {
-    "dev": "tsc ./*.ts & electron .",
+    "devd": "tsc ./*.ts & electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

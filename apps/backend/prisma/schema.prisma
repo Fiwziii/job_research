@@ -23,4 +23,11 @@ model account {
   disabled Boolean @default(false)
   created_at DateTime @default(now())
   updated_at DateTime @default(now())
+  isAdmin Boolean @default(false)
+}
+model blackListToken {
+  id Int @id @default(autoincrement())
+  token String
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now())
 }
